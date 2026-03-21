@@ -1,0 +1,29 @@
+{
+  "name": "phantom-monorepo",
+  "private": true,
+  "description": "Enterprise-Grade, Anonymous, Serverless P2P Chat Platform",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.3",
+    "@types/libsodium-wrappers": "^0.8.2",
+    "@types/node": "^25.5.0",
+    "turbo": "latest",
+    "typescript": "^5.5.0"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "overrides": {
+      "@libp2p/interface": "latest",
+      "@libp2p/peer-id": "latest",
+      "@libp2p/crypto": "latest"
+    },
+    "ignoredBuiltDependencies": [
+      "better-sqlite3"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "@phantom/core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@chainsafe/libp2p-gossipsub": "latest",
+    "@chainsafe/libp2p-noise": "latest",
+    "@chainsafe/libp2p-yamux": "latest",
+    "@libp2p/autonat": "latest",
+    "@libp2p/circuit-relay-v2": "latest",
+    "@libp2p/crypto": "^5.1.13",
+    "@libp2p/dcutr": "latest",
+    "@libp2p/identify": "latest",
+    "@libp2p/interface": "^3.1.0",
+    "@libp2p/kad-dht": "latest",
+    "@libp2p/mdns": "latest",
+    "@libp2p/peer-id": "^6.0.4",
+    "@libp2p/ping": "^3.0.13",
+    "@libp2p/tcp": "latest",
+    "@libp2p/webrtc": "latest",
+    "@libp2p/websockets": "latest",
+    "@signalapp/libsignal-client": "^0.62.0",
+    "hash-wasm": "^4.11.0",
+    "it-byte-stream": "^2.0.4",
+    "it-pb-rpc": "^0.2.0",
+    "it-pushable": "^3.2.3",
+    "libp2p": "^3.1.6",
+    "libsodium-wrappers-sumo": "^0.8.2",
+    "multiformats": "^13.3.1",
+    "socks-proxy-agent": "^9.0.0",
+    "uint8arrays": "^5.1.0",
+    "undici": "^7.24.5"
+  },
+  "devDependencies": {
+    "@types/libsodium-wrappers": "^0.8.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/styled-components": "^5.1.36",
+    "it-length-prefixed": "^10.0.1",
+    "it-pipe": "^3.0.1",
+    "libsodium-wrappers": "^0.8.2",
+    "typescript": "^5.5.0",
+    "vitest": "latest"
+  }
+}
