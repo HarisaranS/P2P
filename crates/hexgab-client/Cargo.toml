@@ -1,0 +1,13 @@
+[package]
+name = "hexgab-client"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+hexgab-core.workspace = true
+hexgab-session.workspace = true
+hexgab-transport.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+serde.workspace = true

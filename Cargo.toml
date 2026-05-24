@@ -1,0 +1,64 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/hexgab-core",
+    "crates/hexgab-crypto",
+    "crates/hexgab-handshake",
+    "crates/hexgab-identity",
+    "crates/hexgab-security",
+    "crates/hexgab-transport",
+    "crates/hexgab-session",
+    "crates/hexgab-client",
+    "crates/hexgab-gui",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["HexGab Contributors"]
+repository = "https://github.com/hexgab/hexgab"
+rust-version = "1.75"
+
+[workspace.dependencies]
+# Pinned for Rust 1.75 toolchain compatibility
+hexgab-core = { path = "crates/hexgab-core" }
+hexgab-crypto = { path = "crates/hexgab-crypto" }
+hexgab-handshake = { path = "crates/hexgab-handshake" }
+hexgab-identity = { path = "crates/hexgab-identity" }
+hexgab-security = { path = "crates/hexgab-security" }
+hexgab-transport = { path = "crates/hexgab-transport" }
+hexgab-session = { path = "crates/hexgab-session" }
+hexgab-client = { path = "crates/hexgab-client" }
+
+anyhow = "1"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+bincode = "1"
+uuid = { version = "1", features = ["v4", "serde"] }
+rand = "0.8"
+zeroize = { version = "1", features = ["derive"] }
+subtle = "2"
+hkdf = "0.12"
+sha2 = "0.10"
+hmac = "0.12"
+chacha20poly1305 = "0.10"
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+ed25519-dalek = { version = "2", features = ["rand_core"] }
+spake2 = "0.4"
+bytes = "1"
+futures = "0.3"
+async-trait = "0.1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.release.package."*"]
+opt-level = 3

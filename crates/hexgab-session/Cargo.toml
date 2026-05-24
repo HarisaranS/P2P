@@ -1,0 +1,23 @@
+[package]
+name = "hexgab-session"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+hexgab-core.workspace = true
+hexgab-crypto.workspace = true
+hexgab-handshake.workspace = true
+hexgab-identity.workspace = true
+hexgab-security.workspace = true
+hexgab-transport.workspace = true
+tokio.workspace = true
+uuid.workspace = true
+serde.workspace = true
+tracing.workspace = true
+rand.workspace = true
+zeroize.workspace = true
+bincode.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time", "sync"] }

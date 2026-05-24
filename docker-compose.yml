@@ -1,0 +1,12 @@
+services:
+  hexgab-gui:
+    build: .
+    container_name: hexgab-gui
+    environment:
+      HEXGAB_BIND_HOST: "0.0.0.0"
+      HEXGAB_TRANSPORT: direct
+      DISPLAY: ${DISPLAY:-:0}
+    network_mode: host
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    command: ["hexgab-gui"]

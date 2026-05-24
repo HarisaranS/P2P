@@ -1,0 +1,19 @@
+[package]
+name = "hexgab-gui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "hexgab-gui"
+path = "src/main.rs"
+
+[dependencies]
+hexgab-client.workspace = true
+hexgab-core.workspace = true
+hexgab-session.workspace = true
+hexgab-transport.workspace = true
+eframe = { version = "0.27", default-features = true, features = ["default_fonts", "glow"] }
+egui = "0.27"
+tokio = { workspace = true, features = ["rt-multi-thread", "sync"] }
+tracing-subscriber.workspace = true
